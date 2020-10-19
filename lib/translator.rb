@@ -6,9 +6,9 @@ def load_library(path)
   library = YAML.load_file(path)
   library.each do |key, value|
     final_hash[key] = {}
-    binding.pry 
     final_hash[key][:english] = value[0]
     final_hash[key][:japanese] = value[1]
+    binding.pry
   end
  final_hash
 end
